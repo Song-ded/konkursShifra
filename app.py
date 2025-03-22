@@ -42,7 +42,7 @@ def index():
 @app.route('/encrypt', methods=['POST'])
 def encrypt():
     data = request.json
-    word_input = lower(data.get('word'))
+    word_input = data.get('word').lower()
     if not word_input:
         return jsonify({'error': 'Слово не предоставлено'}), 400
     encrypted_word = encrypt_word(word_input)

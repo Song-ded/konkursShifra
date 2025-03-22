@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конкурс - Разгадай шифр!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <header>
+            <img src="{{ url_for('static', filename='2l.png') }}" alt="Логотип (темная тема)" class="logo logo-dark">
+            <img src="{{ url_for('static', filename='1l.png') }}" alt="Логотип (светлая тема)" class="logo logo-light">
+        </header>
+
+        <main>
+            <h1>Разгадай шифр!</h1>
+            <p class="subtitle">Введите текст ниже, чтобы зашифровать его:</p>
+
+            <textarea id="inputText" placeholder="Введите текст здесь..." class="input-field"></textarea>
+
+            <button id="encryptButton" class="primary-button">Зашифровать</button>
+
+            <div id="outputText" class="output-box">
+                <h2>Результат:</h2>
+                <p id="encryptedResult" class="result-text"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

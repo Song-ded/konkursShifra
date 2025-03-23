@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body class="dark-theme">
+    <div id="contestEndModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Конкурс завершен!</h2>
+            <p>С результатами можно ознакомиться на нашем Discord-сервере</p>
+            <a href="https://discord.gg/PGSDKDb7YA" class="discord-button" target="_blank">
+                <i class="fab fa-discord"></i> Перейти в Discord
+            </a>
+        </div>
+    </div>
+
     <div class="container">
         <button id="themeToggle" class="theme-toggle">
             <i class="fas fa-moon"></i>
         </button>
 
         <header>
-            <img src="{{ url_for('static', filename='2l.png') }}" alt="Логотип (темная тема)" class="logo logo-dark">
-            <img src="{{ url_for('static', filename='1l.png') }}" alt="Логотип (светлая тема)" class="logo logo-light">
+            <img src="{{ url_for('static', filename='2l.png') }}" alt="Логотип" class="logo logo-dark">
+            <img src="{{ url_for('static', filename='1l.png') }}" alt="Логотип" class="logo logo-light">
         </header>
 
         <main>
